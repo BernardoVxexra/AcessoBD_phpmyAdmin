@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de BD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        body{
+            font-family: 'Oswald' , sans-serif;
+            overflow-x: hidden;
+            color: #42424A;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 249px;
+            border-radius: 1px solid #dbdbdb;
+            background-color: aqua;
+        }
+        header ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 0 112px;
+            border-radius: 20%;
+        }
+        header ul li:last-child{
+            margin-right: 0;
+        }
+        header ul li a{
+            text-decoration: none;
+            color: #42424A;
+            padding: 26px 0;
+            display: inline-block;
+            transition:  all ease 0.3s;
+            font-size: 18px;
+           
+        }
+        header ul li a:hover{
+            color: #ff8a00;
+        }
+        /*submenu */
+        header ul .submenu{
+        position: absolute;
+        width: 160px;
+        background-color: #dbdbdb;
+        box-shadow: 0 20px 45px #00000020;
+        margin-top: -70px;
+        opacity: 0;
+        z-index: 999;
+        transition: all ease 0.5s; 
+        }
+        header ul li:hover .submenu{
+            z-index: 99;
+            opacity: 1;
+            margin-top: 0;
+        }
+
+        header ul .submenu li{
+            margin: 0;
+            width: 100%;
+        }
+        header ul .submenu li a{
+            padding: 15px 20px;
+            display: inline-block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Listar</a>
+                        <ul class="submenu">
+                            <li><a href="listarAutor.php">Listar Autor</a></li>
+                            <li><a href="listarAutoria.php">Listar Autoria</a></li>
+                            <li><a href="listarLivro.php">Listar Livro</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Cadastrar</a>
+                        <ul class="submenu">
+                            <li><a href="CadastrarAutor.php">Cadastrar Autor</a></li>
+                            <li><a href="CadastrarAutoria.php">Cadastrar Autoria</a></li>
+                            <li><a href="CadastrarLivro.php">Cadastrar Livro</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Pesquisar</a>
+                        <ul class="submenu">
+                            <li><a href="pesquisarAutor.php">Pesquisar Autor</a></li>
+                            <li><a href="pesquisarAutoria.php">Pesquisar Autoria</a></li>
+                            <li><a href="pesquisarLivro.php">Pesquisar Livro</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Excluir</a>
+                        <ul class="submenu">
+                            <li><a href="excluirAutor.php">Excluir Autor</a></li>
+                            <li><a href="excluirAutoria.php">Excluir Autoria</a></li>
+                            <li><a href="excluirLivro.php">Excluir Livro</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Alterar</a>
+                        <ul class="submenu">
+                            <li><a href="../Autoria/AlterarAutor.php">Alterar Autor</a></li>
+                            <li><a href="../Autoria/AlterarAutoria.php">Alterar Autoria</a></li>
+                            <li><a href="#">Alterar Livro</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </main>
+</body>
+</html>
