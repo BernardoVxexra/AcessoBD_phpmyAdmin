@@ -37,15 +37,15 @@
 </head>
 <body>
     <center>
-        <font face="Century Gothic" size="6"><b>Alteração de Produtos Cadastrados</b></font><br>
+        <font face="Century Gothic" size="6"><b>Alteração de Livros Cadastrados</b></font><br>
         <font size="4"></font>
     </center>
     <br>
     <font size="3">
-        <form name="cliente" method="POST" action="Alterar2Autor.php">
+        <form name="cliente" method="POST" action="AlterarLivro2.php">
             <fieldset>
                 <legend><b>Informe o código do livro cadastrado: </b></legend>
-                <p>ID: <input name="txtlivro" type="text" size="20" maxlength="5" placeholder="Id do Livro"></p>
+                <p>ID: <input name="livro" type="text" size="20" maxlength="5" placeholder="Id do Livro"></p>
                 <br><br>
                 <center>
                     <input name="btnenviar" type="submit" value="consultar"> &nbsp;&nbsp;

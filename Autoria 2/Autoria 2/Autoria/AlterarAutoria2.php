@@ -6,14 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <center><font face= "Century Gothic" size="6"><b>Alteração de Autores Cadastrados</b><font size= "4">
+    <center><font face= "Century Gothic" size="6"><b>Alteração de Autorias Cadastrados</b><font size= "4">
         <font face= "Century Gothic" size = "3"><br>
         <fieldset>
             <legend><b> Alterar </b></legend>
 
             <?php
-              $txtcodautor=$_POST["txtcodautor"];
-              $txtcodlivro=$_POST["txtcodlivro"];
+              $txtcodautor = $_POST["codautor"];
+              $txtcodlivro = $_POST["codlivro"];
               include_once 'Autoria.php';
               $auto = new autoria();
               $auto->setcod_autor($txtcodautor);
@@ -28,8 +28,8 @@
               ?>
               
                <input type="hidden" name="txtcodautor" size="5" value='<?php echo $autoria_mostrar[0]?>'>
-               <b><?php echo "Cod Autor: " . $autoria_mostrar[0]; ?></b>
                <input type="hidden" name="txtcodlivro" size="5" value='<?php echo $autoria_mostrar[1]?>'>
+               <b><?php echo "Cod Autor: " . $autoria_mostrar[0]; ?></b>
                <b><?php echo "Cod Livro: " . $autoria_mostrar[1]; ?></b>
                <br><br> <b> <?php echo "Data de Lançamento: " ;?></b>
                <input type = "text" name="txtDataLanca" size="25" value = '<?php echo $autoria_mostrar[2]?>'>
@@ -51,12 +51,12 @@
             if(isset($btnalterar))
             {
                 include_once 'Autoria.php';
-                $ria = new autoria();
-                $ria->setcod_autor($txtcodautor);
-                $ria->setcod_livro($txtcodlivro);
-                $ria->setdataLancamento($txtDataLanca);
-                $ria->seteditora($txteditora);
-                echo "<br><br><h3>" . $ria->alterar2() . "</h3>";
+                $au = new autoria();
+                $au->setcod_autor($txtcodautor);
+                $au->setcod_livro($txtcodlivro);
+                $au->setdataLancamento($txtDataLanca);
+                $au->seteditora($txteditora);
+                echo "<br><br><h3>" . $au->alterar2() . "</h3>";
                 header("location: AlterarAutoria.php");
 
             }

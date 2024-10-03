@@ -42,12 +42,12 @@
     </center>
     <br>
     <font size="3">
-        <form name="cliente" method="POST" action="Alterar2Autor.php">
+        <form name="cliente" method="POST" action="AlterarAutoria2.php">
             <fieldset>
                 <legend><b>Informe o código do autor: </b></legend>
-                <p>ID do autor: <input name="txtcodautor" type="text" size="20" maxlength="5" placeholder="Id do Autor"></p>
+                <p>ID do autor: <input name="codautor" type="text" size="20" maxlength="5" placeholder="Id do Autor"></p>
                 <legend><b>Informe o código do livro: </b></legend>
-                <p>ID do livro: <input name="txtcodlivro" type="text" size="20" maxlength="5" placeholder="Id do Livro"></p>
+                <p>ID do livro: <input name="codlivro" type="text" size="20" maxlength="5" placeholder="Id do Livro"></p>
                 <br><br>
                 <center>
                     <input name="btnenviar" type="submit" value="consultar"> &nbsp;&nbsp;

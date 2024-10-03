@@ -12,7 +12,7 @@
             <legend><b> Alterar </b></legend>
 
             <?php
-              $txtlivro=$_POST["txtlivro"];
+              $txtlivro=$_POST["livro"];
               include_once 'livro.php';
               $liv = new livro();
               $liv->setCod_livro($txtlivro);
@@ -25,7 +25,7 @@
                 {
               ?>
               
-               <input type="hidden" name="txtid" size="5" value='<?php echo $livro_mostrar[0]?>'>
+               <input type="hidden" name="txtlivro" size="5" value='<?php echo $livro_mostrar[0]?>'>
                <b><?php echo "ID: " . $livro_mostrar[0]; ?></b>
                <br><br> <b> <?php echo "Titulo: " ;?></b>
                <input type = "text" name="txttitulo" size="25" value = '<?php echo $livro_mostrar[1]?>'>
@@ -36,7 +36,7 @@
                <br><br> <b> <?php echo "Idioma: " ;?></b>
                <input type = "text" name="txtidioma" size="25" value = '<?php echo $livro_mostrar[4]?>'>
                <br><br> <b> <?php echo "QtdePag: " ;?></b>
-               <input type = "text" name="txtpag" size="25" value = '<?php echo $livro_mostrar[4]?>'>
+               <input type = "text" name="txtpag" size="25" value = '<?php echo $livro_mostrar[5]?>'>
 
                <br><br><br><center>
                 <input name="btnalterar" type="submit" value="Alterar">
@@ -52,12 +52,12 @@
             {
                 include_once 'livro.php';
                 $li = new livro();
-                $li->setCod_livro($txtid);
-                $li->setTitulo($txttitulo);
                 $li->setCategoria($txtcategoria);
-                $li->setISBN($txtisbn);
+                $li->setCod_livro($txtlivro);
                 $li->setIdioma($txtidioma);
                 $li->setQtdePag($txtpag);
+                $li->setISBN($txtisbn);
+                $li->setTitulo($txttitulo);
                 
                 echo "<br><br><h3>" . $li->alterar2() . "</h3>";
                 header("location: AlterarLivro.php");
