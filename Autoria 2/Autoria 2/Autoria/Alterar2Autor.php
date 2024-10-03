@@ -9,10 +9,10 @@
     <center><font face= "Century Gothic" size="6"><b>Alteração de Autores Cadastrados</b><font size= "4">
         <font face= "Century Gothic" size = "3"><br>
         <fieldset>
-            <legend<b> Alterar </b></legend>
+            <legend><b> Alterar </b></legend>
 
             <?php
-              $txtid=$_POST["txtid"];
+              $txtid = $_POST["txtid"];
               include_once 'Autor.php';
               $a = new Autor();
               $a->setCodigo($txtid);

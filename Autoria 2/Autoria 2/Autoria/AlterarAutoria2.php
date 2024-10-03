@@ -9,16 +9,16 @@
     <center><font face= "Century Gothic" size="6"><b>Alteração de Autores Cadastrados</b><font size= "4">
         <font face= "Century Gothic" size = "3"><br>
         <fieldset>
-            <legend<b> Alterar </b></legend>
+            <legend><b> Alterar </b></legend>
 
             <?php
               $txtcodautor=$_POST["txtcodautor"];
               $txtcodlivro=$_POST["txtcodlivro"];
               include_once 'Autoria.php';
-              $aut = new autoria();
-              $aut->setcod_autor($txtcodautor);
-              $aut->setcod_livro($txtcodlivro);
-              $autoria_bd = $aut->alterar();
+              $auto = new autoria();
+              $auto->setcod_autor($txtcodautor);
+              $auto->setcod_livro($txtcodlivro);
+              $autoria_bd = $auto->alterar();
             ?>
             
             <br><form name="cliente2" method = "POST" action = "">
@@ -51,12 +51,12 @@
             if(isset($btnalterar))
             {
                 include_once 'Autoria.php';
-                $auto = new autoria();
-                $auto->setcod_autor($txtcodautor);
-                $auto->setcod_livro($txtcodlivro);
-                $auto->setdataLancamento($txtDataLanca);
-                $auto->seteditora($txteditora);
-                echo "<br><br><h3>" . $auto->alterar2() . "</h3>";
+                $ria = new autoria();
+                $ria->setcod_autor($txtcodautor);
+                $ria->setcod_livro($txtcodlivro);
+                $ria->setdataLancamento($txtDataLanca);
+                $ria->seteditora($txteditora);
+                echo "<br><br><h3>" . $ria->alterar2() . "</h3>";
                 header("location: AlterarAutoria.php");
 
             }
